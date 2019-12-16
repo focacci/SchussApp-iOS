@@ -16,6 +16,7 @@
 		1B90D22423A7485D003A3B7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B90D22223A7485D003A3B7A /* LaunchScreen.storyboard */; };
 		1B90D22F23A7485D003A3B7A /* SchussApp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D22E23A7485D003A3B7A /* SchussApp_iOSTests.swift */; };
 		1B90D23A23A7485E003A3B7A /* SchussApp_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D23923A7485E003A3B7A /* SchussApp_iOSUITests.swift */; };
+		1B90D24823A7CF0E003A3B7A /* BusSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D24723A7CF0E003A3B7A /* BusSignUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1B90D23523A7485E003A3B7A /* SchussApp-iOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SchussApp-iOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B90D23923A7485E003A3B7A /* SchussApp_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchussApp_iOSUITests.swift; sourceTree = "<group>"; };
 		1B90D23B23A7485E003A3B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B90D24723A7CF0E003A3B7A /* BusSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusSignUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				1B90D21423A7485C003A3B7A /* AppDelegate.swift */,
 				1B90D21623A7485C003A3B7A /* SceneDelegate.swift */,
+				1B90D24723A7CF0E003A3B7A /* BusSignUp.swift */,
 				1B90D21823A7485C003A3B7A /* ViewController.swift */,
 				1B90D21A23A7485C003A3B7A /* Main.storyboard */,
 				1B90D22023A7485D003A3B7A /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 				1B90D21923A7485C003A3B7A /* ViewController.swift in Sources */,
 				1B90D21523A7485C003A3B7A /* AppDelegate.swift in Sources */,
 				1B90D21F23A7485C003A3B7A /* SchussApp_iOS.xcdatamodeld in Sources */,
+				1B90D24823A7CF0E003A3B7A /* BusSignUp.swift in Sources */,
 				1B90D21723A7485C003A3B7A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
