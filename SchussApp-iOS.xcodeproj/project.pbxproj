@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B76243E23A86E980045995E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1B76243D23A86E980045995E /* Alamofire */; };
 		1B90D21523A7485C003A3B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D21423A7485C003A3B7A /* AppDelegate.swift */; };
 		1B90D21723A7485C003A3B7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D21623A7485C003A3B7A /* SceneDelegate.swift */; };
 		1B90D21923A7485C003A3B7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D21823A7485C003A3B7A /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B76243E23A86E980045995E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +152,9 @@
 			dependencies = (
 			);
 			name = "SchussApp-iOS";
+			packageProductDependencies = (
+				1B76243D23A86E980045995E /* Alamofire */,
+			);
 			productName = "SchussApp-iOS";
 			productReference = 1B90D21123A7485C003A3B7A /* SchussApp-iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +227,9 @@
 				Base,
 			);
 			mainGroup = 1B90D20823A7485C003A3B7A;
+			packageReferences = (
+				1B76243C23A86E980045995E /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1B90D21223A7485C003A3B7A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -598,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B76243C23A86E980045995E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B76243D23A86E980045995E /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B76243C23A86E980045995E /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1B90D21D23A7485C003A3B7A /* SchussApp_iOS.xcdatamodeld */ = {

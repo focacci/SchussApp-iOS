@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var sign_up: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view
@@ -29,9 +30,11 @@ class ViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func collect_information(_ sender: UIButton) {
-        first_name_test.text = first_name.text
-        last_name_test.text = last_name.text
-        pass_number_test.text = pass_number.text
+        let sign_up = BusSignUp(self.first_name.text!, self.last_name.text!, self.pass_number.text!)
+        let response = sign_up.testServerConnection()
+        first_name_test.text = response
+        last_name_test.text = response
+        pass_number_test.text = response
     }
     
 
