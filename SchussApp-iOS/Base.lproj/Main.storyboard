@@ -56,40 +56,51 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bp2-1s-8OK">
-                                <rect key="frame" x="133" y="645" width="148" height="47"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
-                                <state key="normal" title="Sign me up!"/>
-                                <connections>
-                                    <action selector="collect_information:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1El-YI-3ly"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Awaiting response from server..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtU-mQ-zcU">
                                 <rect key="frame" x="16" y="92" width="382" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rN-9d-TFo">
+                                <rect key="frame" x="333" y="653" width="30" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Test">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="test_server_connection:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wDS-42-7ue"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRb-Ld-ha4">
+                                <rect key="frame" x="154" y="651" width="113" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Sign me up!"/>
+                                <connections>
+                                    <action selector="submit_credentials:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJV-yo-Bh8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FtU-mQ-zcU" secondAttribute="trailing" constant="16" id="00x-r1-Pt2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KqV-EJ-Iyd" secondAttribute="trailing" constant="84" id="1XO-7X-kKw"/>
                             <constraint firstItem="vgt-jK-n9K" firstAttribute="top" secondItem="chv-DZ-81f" secondAttribute="bottom" constant="8" id="D9d-bK-Hjx"/>
-                            <constraint firstItem="Bp2-1s-8OK" firstAttribute="top" secondItem="vgt-jK-n9K" secondAttribute="bottom" constant="44" id="Gz2-ex-qft"/>
                             <constraint firstItem="RrL-82-Jg9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="IRV-jJ-QiZ"/>
+                            <constraint firstItem="eRb-Ld-ha4" firstAttribute="top" secondItem="vgt-jK-n9K" secondAttribute="bottom" constant="50" id="Kff-CU-PIT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NQu-rF-AAI" secondAttribute="trailing" constant="43" id="L4s-hc-ngy"/>
-                            <constraint firstItem="Bp2-1s-8OK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="133" id="Q4Q-Ga-KI5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="knY-uV-0fK" secondAttribute="trailing" constant="43" id="Qwy-yT-zub"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vgt-jK-n9K" secondAttribute="trailing" constant="43" id="X32-6V-ImQ"/>
                             <constraint firstItem="knY-uV-0fK" firstAttribute="top" secondItem="sQf-de-6we" secondAttribute="bottom" constant="42" id="XmI-ML-Cx5"/>
+                            <constraint firstItem="6rN-9d-TFo" firstAttribute="top" secondItem="vgt-jK-n9K" secondAttribute="bottom" constant="52" id="YIj-dt-0w6"/>
                             <constraint firstItem="FtU-mQ-zcU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ybq-Bv-jbU"/>
                             <constraint firstItem="knY-uV-0fK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="ZGw-aB-xZy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sQf-de-6we" secondAttribute="trailing" constant="79" id="ZoR-yE-ICq"/>
                             <constraint firstItem="chv-DZ-81f" firstAttribute="top" secondItem="NQu-rF-AAI" secondAttribute="bottom" constant="54" id="bMd-ex-X3D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="chv-DZ-81f" secondAttribute="trailing" constant="149" id="bjc-xY-a61"/>
+                            <constraint firstItem="eRb-Ld-ha4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="154" id="bxy-xi-hgn"/>
                             <constraint firstItem="NQu-rF-AAI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="ccY-Hz-hMO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bp2-1s-8OK" secondAttribute="trailing" constant="133" id="eTe-XY-vei"/>
+                            <constraint firstItem="6rN-9d-TFo" firstAttribute="leading" secondItem="eRb-Ld-ha4" secondAttribute="trailing" constant="66" id="ffA-H9-F1m"/>
                             <constraint firstItem="KqV-EJ-Iyd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="gOz-Q0-Nfb"/>
                             <constraint firstItem="sQf-de-6we" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="79" id="hgV-y0-irU"/>
                             <constraint firstItem="KqV-EJ-Iyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="84" id="lJV-34-fwD"/>
@@ -106,9 +117,9 @@
                     <connections>
                         <outlet property="first_name" destination="knY-uV-0fK" id="ShQ-E0-65w"/>
                         <outlet property="last_name" destination="RrL-82-Jg9" id="5sm-uD-0P2"/>
+                        <outlet property="location" destination="vgt-jK-n9K" id="OB6-2f-J28"/>
                         <outlet property="pass_number" destination="NQu-rF-AAI" id="Tcv-35-bTo"/>
                         <outlet property="response_text" destination="FtU-mQ-zcU" id="pdr-eS-GfV"/>
-                        <outlet property="sign_up" destination="Bp2-1s-8OK" id="zFD-mD-P4y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

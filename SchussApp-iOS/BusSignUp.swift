@@ -15,17 +15,73 @@ class BusSignUp {
     var first_name: String
     var last_name: String
     var pass_number: String
+    var location: String
     
     var server_response: String = "No response"
     
     
-    init(_ first_name: String, _ last_name: String, _ pass_number: String) {
+    init(_ first_name: String, _ last_name: String, _ pass_number: String, _ location: String) {
         self.first_name = first_name
         self.last_name = last_name
         self.pass_number = pass_number
+        self.location = location
     }
     
     
+    
+    
+    
+    
+    //MARK: Submit
+    public func submit() {
+        
+        let credentials = Credentials(self.first_name, self.last_name, self.pass_number, self.location)
+        guard let uploadData = try? JSONEncoder().encode(credentials) else {
+            return
+        }
+        
+        let sem = DispatchSemaphore(value: 0);
+        
+        let url = URL(string: "http://127.0.0.1:5000/signup")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.uploadTask(with: request, from: uploadData) { (data, response, error) in
+            
+            guard let dataResponse = data, error == nil else {
+                print(error?.localizedDescription ?? "Response Error")
+                return
+            }
+            
+            do {
+                //here dataResponse received from a network request
+                if let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: []) as? [String: Any] {
+                    //print(jsonResponse!) //Response result
+                    if let message = jsonResponse["status"] as? String {
+                        self.server_response = message
+                        sem.signal()
+                    }
+                }
+                
+            } catch let parsingError {
+                print("Error", parsingError)
+                return
+            }
+            
+        }
+        task.resume()
+        sem.wait()
+        
+        return
+    }
+    
+    
+    
+    
+    
+    
+    //MARK: Test
     public func testServerConnection() {
         
         let url = URL(string: "http://127.0.0.1:5000/")
@@ -62,3 +118,17 @@ class BusSignUp {
 
 }
 
+
+struct Credentials: Codable {
+    var first_name: String
+    var last_name: String
+    var pass_number: String
+    var location: String
+    
+    init(_ first_name: String, _ last_name: String, _ pass_number: String, _ location: String) {
+        self.first_name = first_name
+        self.last_name = last_name
+        self.pass_number = pass_number
+        self.location = location
+    }
+}
