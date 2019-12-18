@@ -6,16 +6,18 @@
 //  Copyright © 2019 Schussmeisters Ski Club. All rights reserved.
 //
 
-import Alamofire
+import UIKit
 
 
 // store sign-up information in a class
-
 class BusSignUp {
     
     var first_name: String
     var last_name: String
     var pass_number: String
+    
+    var server_response: String = "No response"
+    
     
     init(_ first_name: String, _ last_name: String, _ pass_number: String) {
         self.first_name = first_name
@@ -24,35 +26,37 @@ class BusSignUp {
     }
     
     
-    func testServerConnection() -> String? {
-        var ret: String = "No response"
+    public func testServerConnection() {
         
-        Alamofire.request("http://127.0.0.1:5000/").responseJSON { response in
-            // make sure no errors
-            guard response.result.error == nil else {
-                // this runs if there is an error
-                print("Error on response from server")
-                // print error code
-                print(response.result.error!)
+        let url = URL(string: "http://127.0.0.1:5000/")
+        let sem = DispatchSemaphore(value: 0);
+        
+        let _ = URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        
+            guard let dataResponse = data, error == nil else {
+                print(error?.localizedDescription ?? "Response Error")
                 return
             }
             
-            guard let json = response.result.value as? [String: Any] else {
-                // didn't get a string object from server
-                print("Did not receive string from server")
+            do {
+                //here dataResponse received from a network request
+                if let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: []) as? [String: Any] {
+                    //print(jsonResponse!) //Response result
+                    if let message = jsonResponse["status"] as? String {
+                        self.server_response = message
+                        sem.signal()
+                    }
+                }
+                
+            } catch let parsingError {
+                print("Error", parsingError)
                 return
             }
-            
-            guard let res = json["test"] as? String else {
-                print("error 3")
-                return
-            }
-            
-            ret = res
+
         }
-        
-        return ret
-        
+        .resume()
+        sem.wait()
+        return
     }
 
 
