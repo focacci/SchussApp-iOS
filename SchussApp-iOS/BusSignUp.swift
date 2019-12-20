@@ -9,6 +9,15 @@
 import UIKit
 
 
+let response_codes: [Int: String] = [
+    0: "Success!",
+    1: "Invalid information.",
+    2: "You are already on the bus list.",
+    3: "No Response."
+]
+
+
+//MARK: CLASS BUSSIGNUP
 // store sign-up information in a class
 class BusSignUp {
     
@@ -17,7 +26,7 @@ class BusSignUp {
     var pass_number: String
     var location: String
     
-    var server_response: String = "No response"
+    var server_response: Int = 3
     
     
     init(_ first_name: String, _ last_name: String, _ pass_number: String, _ location: String) {
@@ -26,8 +35,6 @@ class BusSignUp {
         self.pass_number = pass_number
         self.location = location
     }
-    
-    
     
     
     
@@ -58,7 +65,7 @@ class BusSignUp {
                 //here dataResponse received from a network request
                 if let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: []) as? [String: Any] {
                     //print(jsonResponse!) //Response result
-                    if let message = jsonResponse["status"] as? String {
+                    if let message = jsonResponse["status"] as? Int {
                         self.server_response = message
                         sem.signal()
                     }
@@ -72,12 +79,8 @@ class BusSignUp {
         }
         task.resume()
         sem.wait()
-        
         return
     }
-    
-    
-    
     
     
     
@@ -98,7 +101,7 @@ class BusSignUp {
                 //here dataResponse received from a network request
                 if let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: []) as? [String: Any] {
                     //print(jsonResponse!) //Response result
-                    if let message = jsonResponse["status"] as? String {
+                    if let message = jsonResponse["status"] as? Int {
                         self.server_response = message
                         sem.signal()
                     }
@@ -119,6 +122,8 @@ class BusSignUp {
 }
 
 
+
+//MARK: STRUCT CREDENTIALS
 struct Credentials: Codable {
     var first_name: String
     var last_name: String
