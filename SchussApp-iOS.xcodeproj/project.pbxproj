@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1B0DE98023AC80CB0063F05E /* SignUp_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B0DE97F23AC80CB0063F05E /* SignUp_ViewController.swift */; };
-		1B76243E23A86E980045995E /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1B76243D23A86E980045995E /* Alamofire */; };
-		1B76244123A979930045995E /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 1B76244023A979930045995E /* SwiftyJSON */; };
 		1B90D21523A7485C003A3B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D21423A7485C003A3B7A /* AppDelegate.swift */; };
 		1B90D21723A7485C003A3B7A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D21623A7485C003A3B7A /* SceneDelegate.swift */; };
 		1B90D21923A7485C003A3B7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D21823A7485C003A3B7A /* ViewController.swift */; };
@@ -20,6 +18,7 @@
 		1B90D22F23A7485D003A3B7A /* SchussApp_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D22E23A7485D003A3B7A /* SchussApp_iOSTests.swift */; };
 		1B90D23A23A7485E003A3B7A /* SchussApp_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D23923A7485E003A3B7A /* SchussApp_iOSUITests.swift */; };
 		1B90D24823A7CF0E003A3B7A /* BusSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B90D24723A7CF0E003A3B7A /* BusSignUp.swift */; };
+		1BDF616A23C3EC5300B9398C /* Mountains.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BDF616923C3EC5300B9398C /* Mountains.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +56,7 @@
 		1B90D23923A7485E003A3B7A /* SchussApp_iOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchussApp_iOSUITests.swift; sourceTree = "<group>"; };
 		1B90D23B23A7485E003A3B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B90D24723A7CF0E003A3B7A /* BusSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusSignUp.swift; sourceTree = "<group>"; };
+		1BDF616923C3EC5300B9398C /* Mountains.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mountains.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +64,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B76244123A979930045995E /* SwiftyJSON in Frameworks */,
-				1B76243E23A86E980045995E /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +111,7 @@
 				1B90D21623A7485C003A3B7A /* SceneDelegate.swift */,
 				1B90D24723A7CF0E003A3B7A /* BusSignUp.swift */,
 				1B90D21823A7485C003A3B7A /* ViewController.swift */,
+				1BDF616923C3EC5300B9398C /* Mountains.swift */,
 				1B90D21A23A7485C003A3B7A /* Main.storyboard */,
 				1B90D22023A7485D003A3B7A /* Assets.xcassets */,
 				1B90D22223A7485D003A3B7A /* LaunchScreen.storyboard */,
@@ -158,8 +157,6 @@
 			);
 			name = "SchussApp-iOS";
 			packageProductDependencies = (
-				1B76243D23A86E980045995E /* Alamofire */,
-				1B76244023A979930045995E /* SwiftyJSON */,
 			);
 			productName = "SchussApp-iOS";
 			productReference = 1B90D21123A7485C003A3B7A /* SchussApp-iOS.app */;
@@ -234,8 +231,6 @@
 			);
 			mainGroup = 1B90D20823A7485C003A3B7A;
 			packageReferences = (
-				1B76243C23A86E980045995E /* XCRemoteSwiftPackageReference "Alamofire" */,
-				1B76243F23A979930045995E /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 			);
 			productRefGroup = 1B90D21223A7485C003A3B7A /* Products */;
 			projectDirPath = "";
@@ -280,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BDF616A23C3EC5300B9398C /* Mountains.swift in Sources */,
 				1B90D21923A7485C003A3B7A /* ViewController.swift in Sources */,
 				1B90D21523A7485C003A3B7A /* AppDelegate.swift in Sources */,
 				1B90D21F23A7485C003A3B7A /* SchussApp_iOS.xcdatamodeld in Sources */,
@@ -614,38 +610,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1B76243C23A86E980045995E /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.9.1;
-			};
-		};
-		1B76243F23A979930045995E /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1B76243D23A86E980045995E /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1B76243C23A86E980045995E /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		1B76244023A979930045995E /* SwiftyJSON */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1B76243F23A979930045995E /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
-			productName = SwiftyJSON;
-		};
-/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1B90D21D23A7485C003A3B7A /* SchussApp_iOS.xcdatamodeld */ = {

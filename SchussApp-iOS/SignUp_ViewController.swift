@@ -30,6 +30,11 @@ class SignUp_ViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func signUpClicked(_ sender: UIButton) {
+        submitToServer()
+    }
+    
+    
+    func submitToServer() {
         let first: String = self.first_name.text!
         let last: String = self.last_name.text!
         let pass: String = self.pass_number.text!
@@ -42,10 +47,8 @@ class SignUp_ViewController: UIViewController {
         response_text.text = response_codes[sign_up.server_response]
         
         if (sign_up.server_response == 0) {
-            
-            self.dismiss(animated: false, completion: {})
+            self.dismiss(animated: true, completion: {})
         }
     }
-    
     
 }

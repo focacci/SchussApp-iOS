@@ -65,10 +65,9 @@ class BusSignUp {
                 //here dataResponse received from a network request
                 if let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: []) as? [String: Any] {
                     //print(jsonResponse!) //Response result
-                    if let message = jsonResponse["status"] as? Int {
-                        self.server_response = message
-                        sem.signal()
-                    }
+                    let message = jsonResponse["status"] as! Int
+                    self.server_response = message
+                    sem.signal()
                 }
                 
             } catch let parsingError {
